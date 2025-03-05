@@ -49,7 +49,6 @@ app.get('/', (request, response) => {
 //   "/" = root
 app.get('/api/notes', (request, response) => {
   response.json(notes);
-  // console.log(request.headers);
   
 });
   
