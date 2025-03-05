@@ -6,6 +6,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
+app.use(express.static('dist'))
 
 
 app.post('/api/notes', (request, response) => {
@@ -73,6 +74,7 @@ app.delete('/api/notes/:id', (request, response) => {
   response.status(204).end()
 
 })
+
 
 
 const PORT = process.env.PORT || 3001
