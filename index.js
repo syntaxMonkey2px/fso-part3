@@ -4,9 +4,11 @@ const cors = require('cors')
 
 const app = express()
 
+
+// middleware
+app.use(express.static('dist'))
 app.use(express.json())
 app.use(cors())
-app.use(express.static('dist'))
 
 
 app.post('/api/notes', (request, response) => {
