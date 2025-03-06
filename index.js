@@ -1,6 +1,7 @@
 const http = require('http')
 const express = require('express')
 const cors = require('cors')
+const path = require('path');
 
 const app = express()
 
@@ -10,6 +11,10 @@ app.use(express.static('dist'))
 app.use(express.json())
 app.use(cors())
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
 
 app.post('/api/notes', (request, response) => {
   const maxId = notes.length > 0
@@ -66,6 +71,7 @@ app.get('/api/notes/:id', (request, response) => {
     }
 
   })
+
 
 app.delete('/api/notes/:id', (request, response) => {
   
