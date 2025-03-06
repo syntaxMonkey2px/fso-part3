@@ -1,6 +1,6 @@
 const http = require('http')
 const express = require('express')
-// const cors = require('cors')
+const cors = require('cors')
 const path = require('path');
 
 const app = express()
@@ -9,7 +9,7 @@ const app = express()
 // middleware
 app.use(express.static('dist'))
 app.use(express.json())
-// app.use(cors())
+app.use(cors())
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
@@ -49,9 +49,9 @@ let notes = [
   }
 ]
 
-app.get('/', (request, response) => {
-    response.sendFile(path.join(__dirname, 'index.html'))
-  })
+// app.get('/', (request, response) => {
+//     response.sendFile(path.join(__dirname, 'index.html'))
+//   })
 
 //   "/" = root
 app.get('/api/notes', (request, response) => {
