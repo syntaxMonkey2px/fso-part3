@@ -49,9 +49,9 @@ let notes = [
   }
 ]
 
-// app.get('/', (request, response) => {
-//     response.sendFile(path.join(__dirname, 'index.html'))
-//   })
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
 
 //   "/" = root
 app.get('/api/notes', (request, response) => {
