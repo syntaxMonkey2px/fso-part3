@@ -14,7 +14,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      axios: 'axios/dist/axios.js',
+      axios: 'axios/dist/axios.min.js',
     },
   },
 });
