@@ -18,9 +18,4 @@ export default defineConfig({
       external: [],
     },
   },
-  resolve: {
-    alias: {
-      axios: 'node_modules/axios/dist/axios.min.js', // Ensure this path is correct
-    },
-  },
 });
