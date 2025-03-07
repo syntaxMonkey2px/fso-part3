@@ -20,7 +20,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      axios: 'axios/dist/axios.min.js', // Ensure this path is correct
+      axios: 'node_modules/axios/dist/axios.min.js', // Ensure this path is correct
     },
   },
 });
