@@ -12,5 +12,9 @@ export default defineConfig({
       },
     },
   },
- 
+  resolve: {
+    alias: {
+      axios: 'axios/dist/axios.js',
+    },
+  },
 });
