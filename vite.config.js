@@ -12,14 +12,5 @@ export default defineConfig({
       },
     },
   },
-  build: {
-    rollupOptions: {
-      external: ['axios'],
-    },
-  },
-  resolve: {
-    alias: {
-      axios: 'axios/dist/axios.js',
-    },
-  },
+ 
 });
