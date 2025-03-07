@@ -7,12 +7,12 @@
     "dev": "node --watch index.js",
     "build": "vite build",
     "test": "echo \\\"Error: no test specified\\\" && exit 1",
-    "build:ui": "rm -rf dist && cd src && npm run build && cp -r dist ../backend",
+    "build:ui": "rm -rf dist && vite build && cp -r dist ../",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "syntaxmonkey2px",
   "license": "ISC",
-  "description": "",
+  "description": "", 
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.21.2",
