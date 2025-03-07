@@ -6,10 +6,12 @@
     "start": "node index.js",
     "dev": "node --watch index.js",
     "build": "vite build",
-    "test": "echo \\\"Error: no test specified\\\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "rm -rf dist && vite build && cp -r dist ../",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
+  "engines": {
+    "node": "20.18.2"},
   "author": "syntaxmonkey2px",
   "license": "ISC",
   "description": "", 
