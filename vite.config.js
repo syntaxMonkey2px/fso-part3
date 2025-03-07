@@ -14,12 +14,13 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['axios'],
+      // Remove 'axios' from external to include it in the build
+      external: [],
     },
   },
   resolve: {
     alias: {
-      axios: 'axios/dist/axios.min.js', // Adjust the path if necessary
+      axios: 'axios/dist/axios.min.js', // Ensure this path is correct
     },
   },
 });
